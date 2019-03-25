@@ -1,0 +1,27 @@
+//@include font-face($style-name, $file, $family);
+//$style-name being the name of the font e.g. Helvetica
+//$file meaning the file name, without the file extensions
+//$family being the folder inside the fonts folder where the font files are
+
+@include font-face('icomoon', 'icomoon', 'icomoon');
+@include font-face('quatro-bold', 'QuatroW00-Bold', 'quatro');
+
+
+/*Sass Variables---------------------------------------------------------------------------*/
+
+$icomoon: 'icomoon';
+$body-font: 'Lato', sans-serif;
+$heading-font: 'quatro-bold', sans-serif;
+
+$black:#000000;
+$white:#ffffff;
+$darkgrey: #161616;
+$pink: #dd356f;
+$blue: #4da6cc;
+$grey:  #4a4a4a;
+
+
+
+
+
+

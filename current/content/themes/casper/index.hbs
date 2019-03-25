@@ -1,0 +1,514 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+
+<style>
+    .inner {
+        max-width: 1250px;
+    }
+
+    .author-template .post-feed, .home-template .post-feed, .tag-template .post-feed {
+        margin: 0px !important;
+    }
+
+    html, body {
+        height: auto;
+    } 
+</style>
+
+<div id="wrapper-main">
+    <header id="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="hamburger-box">
+                <div class="hamburger-box__menu">
+
+                </div>
+            </div>
+            <nav class="primary-nav">
+                <div class="logo--nav">
+                    <img src="images/logo.svg" alt="Create Music Group">
+                </div>
+                <div class="primary-nav__content">
+                    <div class="close-btn">
+
+                    </div>
+                    <ul class="primary-nav__menu">
+                        <li class="active"><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">news</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                    <div class="primary-nav__contact-info">
+                        Create Music Group<br> 1320 N. Wilton Pl. <br> Los Angeles, CA 90028
+                    </div>
+                </div>
+
+            </nav>
+            <a href="/" class="logo logo--header">
+                <img src="images/logo.svg" alt="Create Music Group">
+            </a>
+        </div>
+    </header>
+    <main id="main">
+        <div id="barba-wrapper">
+            <div class="barba-container">
+                <section class="hero parallax-bg">
+                    <div class="hero__slider">
+                        <div class="hero__slider-item">
+                            <div class="hero__slider-artist">
+                                <div class="container">
+                                    <div class="row justify-content-end">
+                                        <div class="col-8 col-md-6">
+                                            <div class="hero__slider-image">
+                                                <img src="images/marshemello.png" alt="Marshmello">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-md-end">
+                                        <div class="col-auto">
+                                            <h4>feat. Marshmello</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero__slider-item">
+                            <div class="hero__slider-artist">
+                                <div class="container">
+                                    <div class="row justify-content-end">
+                                        <div class="col-8 col-md-6">
+                                            <div class="hero__slider-image">
+                                                <img src="images/lilbaby-large.png" alt="Lil Baby Color">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-md-end">
+                                        <div class="col-auto">
+                                            <h4>feat. Lil Baby Color</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__title">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-7">
+                                    <h1 class="split-txt">
+                                        Artists control <br>their own destiny.
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="counter-widget">
+                        <span class="counter-widget__count">$60,174,230 MM</span>
+                        <p class="counter-widget__info">
+                            COLLECTED FOR ARTISTS THIS YEAR
+                        </p>
+                    </div>
+                </section>
+
+                <div class="inner">
+                    <div class="post-feed">
+                        {{#foreach posts}}
+
+                            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                            {{> "post-card"}}
+
+                        {{/foreach}}
+                    </div>
+                </div>
+
+                <section class="blog-panel">
+                    <div class="blog-wrap">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-auto">
+                                    <div class="blog-panel__media">
+                                        <figure>
+                                            <img src="images/Article-One.png" alt="Article One">
+                                        </figure>
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="blog-panel__desc">
+                                        <h2>How Create Music Group Found $60M In Unclaimed Revenue For Artists and Labels
+                                            in Three Years</h2>
+                                        <a href="#" class="link">read more <i class="arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section><!-- . blog-panel -->
+                <section class="clientele parallax-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="section-title">Clients</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="clientele__list">
+                        <li class="clientele__artist-1">
+                            <img src="images/Don-Diablo-Cutout-2016.png" alt="Don Diablo">
+                        </li>
+                        <li class="clientele__artist-2">
+                            <img src="images/future-png-rapper.png" alt="Future Rapper">
+                        </li>
+                        <li class="clientele__artist-3">
+                            <img src="images/the_chain_smokers_3.png" alt="The Chain Smokers">
+                        </li>
+                        <li class="clientele__artist-4">
+                            <img src="images/lilbaby-color.png" alt="Lil Baby">
+                        </li>
+
+                        <li class="clientele__artist-5">
+                            <img src="images/6ix9ine-khl.png" alt="6ix9ine">
+                        </li>
+                        <li class="clientele__artist-6">
+                            <img src="images/kodak-black-color.png" alt="Kodak Black">
+                        </li>
+                        <li class="clientele__artist-7">
+                            <img src="images/dhilllonfrancis.png" alt="Dhilllon Francis">
+                        </li>
+                        <li class="clientele__artist-8">
+                            <img src="images/porter.png" alt="Porter">
+                        </li>
+                    </ul>
+                </section><!-- .clientele -->
+                <section class="bg-wrap parallax-bg parallax-bg-large">
+                    <section class="services">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="section-title">services</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <div class="services__nav">
+                                        <div class="services__nav-item">
+                                            <h4>Distribution</h4>
+                                        </div>
+                                        <div class="services__nav-item">
+                                            <h4>Publishing</h4>
+                                        </div>
+                                        <div class="services__nav-item">
+                                            <h4>Artist Funding</h4>
+                                        </div>
+                                        <div class="services__nav-item">
+                                            <h4>Global Rights Collection</h4>
+                                        </div>
+                                        <div class="services__nav-item">
+                                            <h4>Playlist Promotion</h4>
+                                        </div>
+                                        <div class="services__nav-item">
+                                            <h4>Enterprise</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <div class="services__slider">
+                                        <div class="services__slider-item" data-title="Distribution">
+                                            <p>In the music industry, a music publisher is responsible for ensuring the
+                                                songwriters and composers receive payment when their compositions are
+                                                used commercially. Through an agreement called a publishing contract,
+                                                a songwriter or composer &quot;assigns&quot; the copyright of their composition
+                                                to a publishing company.
+
+                                            </p>
+                                        </div>
+                                        <div class="services__slider-item" data-title="Publishing">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque eleifend ante sed ullamcorper. Aenean in sapien
+                                                eget sapien viverra ultrices non bibendum eros. Integer finibus urna
+                                                quam, ac laoreet nunc consectetur eu. Ut vulputate nunc quis lacus finibus,
+                                                at luctus mauris facilisis. Quisque vulputate nec ante blandit vehicula.
+                                                Proin egestas scelerisque lacus, id lobortis massa dignissim quis. Nunc
+                                                feugiat molestie massa sit amet aliquet. Cras ipsum libero, accumsan
+                                                vitae suscipit ut, volutpat et turpis. Mauris elementum urna id enim
+                                                bibendum porta.
+                                            </p>
+                                        </div>
+                                        <div class="services__slider-item" data-title="Artist Funding">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque eleifend ante sed ullamcorper. Aenean in sapien
+                                                eget sapien viverra ultrices non bibendum eros. Integer finibus urna
+                                                quam, ac laoreet nunc consectetur eu. Ut vulputate nunc quis lacus finibus,
+                                                at luctus mauris facilisis. Quisque vulputate nec ante blandit vehicula.
+                                                Proin egestas scelerisque lacus, id lobortis massa dignissim quis. Nunc
+                                                feugiat molestie massa sit amet aliquet. Cras ipsum libero, accumsan
+                                                vitae suscipit ut, volutpat et turpis. Mauris elementum urna id enim
+                                                bibendum porta.
+                                            </p>
+                                        </div>
+                                        <div class="services__slider-item" data-title="Global Rights Collectio">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque eleifend ante sed ullamcorper. Aenean in sapien
+                                                eget sapien viverra ultrices non bibendum eros. Integer finibus urna
+                                                quam, ac laoreet nunc consectetur eu. Ut vulputate nunc quis lacus finibus,
+                                                at luctus mauris facilisis. Quisque vulputate nec ante blandit vehicula.
+                                                Proin egestas scelerisque lacus, id lobortis massa dignissim quis. Nunc
+                                                feugiat molestie massa sit amet aliquet. Cras ipsum libero, accumsan
+                                                vitae suscipit ut, volutpat et turpis. Mauris elementum urna id enim
+                                                bibendum porta.
+                                            </p>
+                                        </div>
+                                        <div class="services__slider-item" data-title="Playlist Promotion">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque eleifend ante sed ullamcorper. Aenean in sapien
+                                                eget sapien viverra ultrices non bibendum eros. Integer finibus urna
+                                                quam, ac laoreet nunc consectetur eu. Ut vulputate nunc quis lacus finibus,
+                                                at luctus mauris facilisis. Quisque vulputate nec ante blandit vehicula.
+                                                Proin egestas scelerisque lacus, id lobortis massa dignissim quis. Nunc
+                                                feugiat molestie massa sit amet aliquet. Cras ipsum libero, accumsan
+                                                vitae suscipit ut, volutpat et turpis. Mauris elementum urna id enim
+                                                bibendum porta.
+                                            </p>
+                                        </div>
+                                        <div class="services__slider-item" data-title="Enterprise">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque eleifend ante sed ullamcorper. Aenean in sapien
+                                                eget sapien viverra ultrices non bibendum eros. Integer finibus urna
+                                                quam, ac laoreet nunc consectetur eu. Ut vulputate nunc quis lacus finibus,
+                                                at luctus mauris facilisis. Quisque vulputate nec ante blandit vehicula.
+                                                Proin egestas scelerisque lacus, id lobortis massa dignissim quis. Nunc
+                                                feugiat molestie massa sit amet aliquet. Cras ipsum libero, accumsan
+                                                vitae suscipit ut, volutpat et turpis. Mauris elementum urna id enim
+                                                bibendum porta.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><!-- .services -->
+                    <section class="blog-panel">
+                        <div class="blog-wrap">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-md-auto">
+                                        <div class="blog-panel__media">
+                                            <figure>
+                                                <img src="images/Article-Two.png" alt="Article Three">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="blog-panel__desc">
+                                            <h2>Musical.ly Juggernaut Flighthouse Launches YouTube Channel</h2>
+                                            <a href="#" class="link">read more <i class="arrow-right"></i></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section><!-- .blog-panel -->
+                    <section class="apps-panel">
+                        <div class="app">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="app__nav">
+                                            <ul class="app__list">
+                                                <li>Artist Portal</li>
+                                                <li>Label Engine</li>
+                                                <li>Splits App</li>
+                                            </ul>
+                                        </div>
+                                        <div class="app__items app--slider">
+                                            <div class="app__item">
+                                                <div class="app__item_wrap">
+                                                    <div class="app__info">
+                                                        <div class="app__title">
+                                                            <span class="app__num">
+                                                                01.
+                                                            </span>
+                                                            <span class="app__name">
+                                                                Artist Portal
+                                                            </span>
+                                                        </div>
+                                                        <div class="app__desc">
+                                                            <p>provides up-to-the-minute insight into their revenue streams
+                                                                on daily basis.
+                                                            </p>
+                                                        </div>
+                                                        <div class="app__platform">
+                                                            <img src="images/web-app-thumb.jpg" alt="web app">
+                                                        </div>
+                                                    </div>
+                                                    <div class="app__media">
+                                                        <video width="100%" height="100%" muted loop controls class="app__video">
+                                                            <source src="video/sample-video.mp4" type="video/mp4"> Your
+                                                            browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="app__item">
+                                                <div class="app__item_wrap">
+                                                    <div class="app__info">
+                                                        <div class="app__title">
+                                                            <span class="app__num">
+                                                                02.
+                                                            </span>
+                                                            <span class="app__name">
+                                                                Artist Portal
+                                                            </span>
+                                                        </div>
+                                                        <div class="app__desc">
+                                                            <p>provides up-to-the-minute insight into their revenue streams
+                                                                on daily basis.
+                                                            </p>
+                                                        </div>
+                                                        <div class="app__platform">
+                                                            <img src="images/web-app-thumb.jpg" alt="web app">
+                                                        </div>
+                                                    </div>
+                                                    <div class="app__media">
+                                                        <video width="100%" height="100%" muted loop controls class="app__video">
+                                                            <source src="video/sample-video.mp4" type="video/mp4"> Your
+                                                            browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="app__item">
+                                                <div class="app__item_wrap">
+                                                    <div class="app__info">
+                                                        <div class="app__title">
+                                                            <span class="app__num">
+                                                                03.
+                                                            </span>
+                                                            <span class="app__name">
+                                                                Artist Portal
+                                                            </span>
+                                                        </div>
+                                                        <div class="app__desc">
+                                                            <p>provides up-to-the-minute insight into their revenue streams
+                                                                on daily basis.
+                                                            </p>
+                                                        </div>
+                                                        <div class="app__platform">
+                                                            <img src="images/web-app-thumb.jpg" alt="web app">
+                                                        </div>
+                                                    </div>
+                                                    <div class="app__media">
+                                                        <video width="100%" height="100%" muted loop controls class="app__video">
+                                                            <source src="video/sample-video.mp4" type="video/mp4"> Your
+                                                            browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <ul class="app__dots">
+                                            <li class="app__current"><span class="app__dot"></span></li>
+                                            <li><span class="app__dot"></span></li>
+                                            <li><span class="app__dot"></span></li>
+                                        </ul> -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section><!-- .services -->
+
+                    <section class="blog-panel">
+                        <div class="blog-wrap">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-md-auto">
+                                        <div class="blog-panel__media">
+                                            <figure>
+                                                <img src="images/Article-Three.png" alt="Article Three">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="blog-panel__desc">
+                                            <h2>Tekashi 6ix9ine New Distribution Deal Dummy Boy Album Leak Dropping Today</h2>
+                                            <a href="#" class="link">read more <i class="arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><!-- . blog-panel -->
+                    <section class="partners">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="section-title">Partners</h3>
+                                    <ul class="partners__list">
+                                        <li><img src="images/universal.png" alt="Universal Music"> </li>
+                                        <li><img src="images/sony-music.png" alt="Universal Music"></li>
+                                        <li><img src="images/eone.png" alt="Universal Music"></li>
+                                        <li><img src="images/mau5trap.png" alt="Universal Music"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+            </div><!-- .barba-container -->
+            <footer id="footer" class="footer">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-md-4">
+                            <div class="footer__logo">
+                                <img src="images/logo.svg" alt="Create Music Group">
+                            </div>
+                            <div class="footer__location">
+                                1320 N. Wilton Pl.<br> Los Angeles, CA 90028
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <h4>
+                                company
+                            </h4>
+                            <div class="footer__nav">
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">News</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-md-auto">
+                            <div class="footer__social-media">
+                                <h4>Stay Connected</h4>
+                                <ul class="footer__social-media-list">
+                                    <li><a href="#"><i class="icon-facebook"></i></a> </li>
+                                    <li><a href="#"><i class="icon-twitter"></i></a> </li>
+                                    <li><a href="#"><i class="icon-instagram"></i></a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md">
+                            <p id="copyright">Copyright 2018 Create Music Group</p>
+                        </div>
+                        <div class="col-12  col-md text-md-right footer__nav-tertiary">
+                            <a href="#">Terms &amp; Conditions</a><span class="seperator">|</span><a href="#">Privacy
+                                Policy
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer><!-- #footer -->
+        </div>
+
+    </main><!-- main -->
+
+</div><!-- #wrapper-main -->

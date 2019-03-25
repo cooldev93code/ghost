@@ -1,0 +1,63 @@
+//font face mixin
+
+@mixin font-face($style-name, $file, $family) {
+    $filepath: "../fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+            url($filepath + ".woff") format('woff'),
+            url($filepath + ".ttf")  format('truetype'),
+            url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+
+}
+
+/*
+* Mixin for easy media queries
+* @include bp(tablet-only) { SCSS here };
+* Default css is for mobile screens
+*/
+@mixin bp($point) {
+    @if $point == below-xs {
+        @media (max-width: 320px) { @content; }
+    }
+    @if $point == below-sm {
+        @media (max-width: 575px) { @content; }
+    }    
+    @if $point == below-md {
+        @media (max-width: 767px) { @content; }
+    }
+    @if $point == below-lg {
+        @media (max-width: 991px) { @content; }
+    }
+    @if $point == sm {
+        @media (min-width: 576px) { @content; }
+    } 
+    @if $point == md {
+        @media (min-width: 768px) { @content; }
+    }    
+    @if $point == lg {
+        @media (min-width: 992px) { @content; }
+    }
+    @if $point == md-lg {
+        @media (min-width: 768px) and (max-width: 991px) { @content; }
+    }
+    @if $point == md-xl {
+        @media (min-width: 768px) and (max-width: 1199px) { @content; }
+    }
+    @if $point == lg-xl {
+        @media (min-width: 992px) and (max-width: 1199px) { @content; }
+    }
+    @if $point == xl {
+        @media (min-width: 1200px) { @content; }
+    }
+    @if $point == xxl {
+        @media (min-width: 1360px) { @content; }
+    }
+
+
+}
+
+
+
